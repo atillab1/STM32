@@ -1,0 +1,19 @@
+# STM32 Debug ve Build dosyaları
+**/Debug/
+**/Release/
+*.d
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.axf
+*.dep
+*.crf
+*.dmp
+*.dis
+*.srec
+*.exe
+*.out
+.metadata/
