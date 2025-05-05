@@ -1,0 +1,10 @@
+12:07:22 **** Incremental Build of configuration Debug for project 09_ADC_Kesme_Ile_Deger_Okuma ****
+make -j20 all 
+arm-none-eabi-size  09_ADC_Kesme_Ile_Deger_Okuma.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8504	     12	   1644	  10160	   27b0	09_ADC_Kesme_Ile_Deger_Okuma.elf
+Finished building: default.size.stdout
+ 
+
+12:07:23 Build Finished. 0 errors, 0 warnings. (took 128ms)
+

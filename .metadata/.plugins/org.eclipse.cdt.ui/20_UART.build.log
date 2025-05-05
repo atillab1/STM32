@@ -1,0 +1,30 @@
+09:55:58 **** Incremental Build of configuration Debug for project 20_UART ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:38: warning: pointer targets in passing argument 2 of 'HAL_USART_Receive' differ in signedness [-Wpointer-sign]
+  106 |           HAL_USART_Receive(&husart2,recieveBuffer,5, HAL_MAX_DELAY);
+      |                                      ^~~~~~~~~~~~~
+      |                                      |
+      |                                      char *
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:415,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_usart.h:513:75: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  513 | HAL_StatusTypeDef HAL_USART_Receive(USART_HandleTypeDef *husart, uint8_t *pRxData, uint16_t Size, uint32_t Timeout);
+      |                                                                  ~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "20_UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\atill\STM32CubeIDE\workspace_1.15.1\20_UART\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="20_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 20_UART.elf
+ 
+arm-none-eabi-size  20_UART.elf 
+arm-none-eabi-objdump -h -S 20_UART.elf  > "20_UART.list"
+   text	   data	    bss	    dec	    hex	filename
+   7900	     12	   1652	   9564	   255c	20_UART.elf
+Finished building: default.size.stdout
+ 
+Finished building: 20_UART.list
+ 
+
+09:56:00 Build Finished. 0 errors, 1 warnings. (took 1s.603ms)
+

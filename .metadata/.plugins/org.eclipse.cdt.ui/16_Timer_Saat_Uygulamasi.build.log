@@ -1,0 +1,10 @@
+14:55:32 **** Incremental Build of configuration Debug for project 16_Timer_Saat_Uygulamasi ****
+make -j20 all 
+arm-none-eabi-size  16_Timer_Saat_Uygulamasi.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7796	     12	   1644	   9452	   24ec	16_Timer_Saat_Uygulamasi.elf
+Finished building: default.size.stdout
+ 
+
+14:55:32 Build Finished. 0 errors, 0 warnings. (took 134ms)
+
